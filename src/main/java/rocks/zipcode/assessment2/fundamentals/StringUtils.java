@@ -58,11 +58,11 @@ public class StringUtils {
     public static Boolean isAlphaString(String string) {
 
 
-        if(!string.matches("[a-zA-Z]+" + "^\"|\"$")){
-            return false;
+        if(string.matches("^[a-zA-Z]+")){
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     /**

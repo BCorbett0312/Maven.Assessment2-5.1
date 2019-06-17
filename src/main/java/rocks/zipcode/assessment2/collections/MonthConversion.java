@@ -3,20 +3,21 @@ package rocks.zipcode.assessment2.collections;
 
 
 import java.util.Map;
+import java.util.TreeMap;
 
 
 /**
  * Use a map to solve
  */
 public class MonthConversion {
-
+    Map calendarMap = new TreeMap();
 
     /**
      * @param monthNumber - ordinal of month in the year; i.e. January = 1, February = 2
      * @param monthName - name of month
      */
     public void add(Integer monthNumber, String monthName) {
-
+        calendarMap.put(monthNumber, monthName);
     }
 
     /**
@@ -24,18 +25,27 @@ public class MonthConversion {
      * @return the name of the respective month
      */
     public String getName(Integer monthNumber) {
-       return null;
+        if(calendarMap.containsKey(monthNumber)){
+            return calendarMap.get(monthNumber).toString();
+        }
+
+        return null;
     }
 
     /**
      * @param monthName - name of month
      * @return - the ordinal of the month in the year
      */
-    public int getNumber(String monthName) {
+    public Integer getNumber(String monthName) {
+        for(Object o: calendarMap.keySet()){
+            if(calendarMap.get(o).equals(monthName)){
+                return (Integer) o;
+            }
 
 
+        }
 
-        return (Integer) null;
+       return null;
     }
 
     /**
@@ -43,7 +53,7 @@ public class MonthConversion {
      * @return true if the monthNumber is in the keySet
      */
     public Boolean isValidNumber(Integer monthNumber) {
-        return null;
+        return calendarMap.containsKey(monthNumber);
     }
 
     /**
@@ -51,14 +61,14 @@ public class MonthConversion {
      * @return true if the monthName is in the valueSet
      */
     public Boolean isValidMonth(String monthName) {
-        return null;
+        return calendarMap.containsValue(monthName);
     }
 
     /**
      * @return number of entries in this mapping
      */
     public Integer size() {
-        return null;
+        return calendarMap.size();
     }
 
     /**
@@ -66,6 +76,6 @@ public class MonthConversion {
      * @param monthName - name of month
      */
     public void update(Integer monthNumber, String monthName) {
-
+        calendarMap.replace(monthNumber, monthName);
     }
 }

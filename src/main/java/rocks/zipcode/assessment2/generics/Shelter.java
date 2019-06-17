@@ -4,6 +4,11 @@ package rocks.zipcode.assessment2.generics;
 import rocks.zipcode.assessment2.generics.ageable.Ageable;
 
 
+import java.util.ArrayList;
+import java.util.Collection;
+
+
+
 
 /**
  * Shelter is a generic class that holds Objects that extends `Ageable`.
@@ -12,7 +17,11 @@ import rocks.zipcode.assessment2.generics.ageable.Ageable;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<p> extends Ageable{
+public class Shelter<E> {
+    Collection<E> shelter;
+
+
+
     public Shelter() {
 
     }
@@ -25,6 +34,7 @@ public class Shelter<p> extends Ageable{
     }
 
     public void add(Object object) {
+
     }
 
     public Boolean contains(Object object) {
@@ -32,6 +42,7 @@ public class Shelter<p> extends Ageable{
     }
 
     public void remove(Object object) {
+        shelter.remove(object);
     }
 
     public Object get(Integer index) {
@@ -39,6 +50,6 @@ public class Shelter<p> extends Ageable{
     }
 
     public Integer getIndexOf(Object ageable) {
-        return 0;
+        return null;
     }
 }
