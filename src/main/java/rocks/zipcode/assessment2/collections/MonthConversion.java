@@ -1,9 +1,16 @@
 package rocks.zipcode.assessment2.collections;
 
+
+
+import java.util.Map;
+
+
 /**
  * Use a map to solve
  */
 public class MonthConversion {
+
+
     /**
      * @param monthNumber - ordinal of month in the year; i.e. January = 1, February = 2
      * @param monthName - name of month
@@ -17,7 +24,7 @@ public class MonthConversion {
      * @return the name of the respective month
      */
     public String getName(Integer monthNumber) {
-        throw new NullPointerException();
+       return null;
     }
 
     /**
@@ -25,7 +32,10 @@ public class MonthConversion {
      * @return - the ordinal of the month in the year
      */
     public int getNumber(String monthName) {
-        return (Integer)null;
+
+
+
+        return (Integer) null;
     }
 
     /**
@@ -48,7 +58,7 @@ public class MonthConversion {
      * @return number of entries in this mapping
      */
     public Integer size() {
-        return -1;
+        return null;
     }
 
     /**
