@@ -36,7 +36,7 @@ public class MonthConversion {
      * @param monthName - name of month
      * @return - the ordinal of the month in the year
      */
-    public Integer getNumber(String monthName) {
+    public int getNumber(String monthName) {
         for(Object o: calendarMap.keySet()){
             if(calendarMap.get(o).equals(monthName)){
                 return (Integer) o;
@@ -45,7 +45,7 @@ public class MonthConversion {
 
         }
 
-       return null;
+       return (Integer) null;
     }
 
     /**
