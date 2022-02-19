@@ -8,6 +8,6 @@ public class Dog extends Animal implements Woofer{
 
 
     public String speak() {
-        return "Woof!\nWoof!";
+        return null;
     }
 }

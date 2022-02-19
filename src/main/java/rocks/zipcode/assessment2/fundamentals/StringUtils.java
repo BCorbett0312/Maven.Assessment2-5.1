@@ -12,13 +12,7 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by left-padding
      */
     public static String padLeft(String stringToBePadded, int amountOfPadding) {
-        String response = "";
-        for (int i = 0; i < amountOfPadding - stringToBePadded.length(); i++){
-            response += " ";
-        }
-        response += stringToBePadded;
-
-        return response;
+        return null;
     }
 
     /**
@@ -27,13 +21,7 @@ public class StringUtils {
      * @return `stringToBePadded` flushed right by right-padding
      */
     public static String padRight(String stringToBePadded, int amountOfPadding) {
-        String response = stringToBePadded;
-
-        for (int i = 0; i< amountOfPadding - stringToBePadded.length(); i++){
-            response += " ";
-        }
-
-        return response;
+        return null;
     }
 
     /**
@@ -42,13 +30,7 @@ public class StringUtils {
      * @return the string repeated and concatenated `n` times
      */
     public static String repeatString(String stringToBeRepeated, int numberOfTimeToRepeat) {
-        String repeated = "";
-        for(int i = 0; i <numberOfTimeToRepeat; i++){
-            repeated += stringToBeRepeated;
-        }
-
-
-        return repeated;
+        return null;
     }
 
     /**
@@ -56,13 +38,7 @@ public class StringUtils {
      * @return - true if string only contains alpha characters
      */
     public static Boolean isAlphaString(String string) {
-        String test = string.replaceAll(" ", "");
-
-        if(test.matches("^[a-zA-Z]+")){
-            return true;
-        }
-
-        return false;
+        return null;
     }
 
     /**
@@ -70,11 +46,7 @@ public class StringUtils {
      * @return - true if string only contains numeric characters
      */
     public static Boolean isNumericString(String string) {
-        if(string.matches("[0-9]+") == false){
-            return false;
-        }
-
-        return true;
+        return null;
     }
 
     /**
@@ -82,11 +54,6 @@ public class StringUtils {
      * @return - true if string only contains special characters
      */
     public static Boolean isSpecialCharacterString(String string) {
-        String splChrs = "*-/@#$%^&_+=()!";
-
-        if(string.matches("[" +splChrs +"]+") == false){
-            return false;
-        }
-        return true;
+        return null;
     }
 }

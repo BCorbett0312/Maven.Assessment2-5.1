@@ -16,44 +16,36 @@ import java.util.Iterator;
  * Shelter<Person> farmHouse = new Shelter<Person>();
  * Shelter<Dog> dogHouse = new Shelter<Dog>();
  */
-public class Shelter<Ageable> implements Iterable<Ageable> {
-    ArrayList<Ageable> shelter;
+public class Shelter<_> {
 
 
 
     public Shelter() {
-        shelter = new ArrayList<>();
+        throw new NullPointerException();
     }
 
     /**
      * @return the number of item in the shelter
      */
     public int size() {
-        return shelter.size();
+        return -1;
     }
 
-    public void add(Ageable object) {shelter.add(object);
-
+    public void add(Object object) {
     }
 
-    public Boolean contains(Ageable object) {
-        return shelter.contains(object);
-    }
-
-    public void remove(Ageable object) {
-        shelter.remove(object);
-    }
-
-    public Ageable get(Integer index) {
-        return shelter.get(index);
-    }
-
-    public Integer getIndexOf(Ageable ageable) {
-        return shelter.indexOf(ageable);
-    }
-
-    @Override
-    public Iterator<Ageable> iterator() {
+    public Boolean contains(Object object) {
         return null;
+    }
+
+    public void remove(Object object) {
+    }
+
+    public Object get(Integer index) {
+        return null;
+    }
+
+    public Integer getIndexOf(Object ageable) {
+        return 0;
     }
 }

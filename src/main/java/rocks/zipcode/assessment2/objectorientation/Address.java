@@ -6,18 +6,7 @@ import java.util.Arrays;
  * @author leon on 28/11/2018.
  */
 public class Address {
-    String addressLine1;
-    String addressLine2;
-    String city;
-    String state;
-    String zipcode;
-
     public Address() {
-        addressLine1 = "";
-        addressLine2 = "";
-        city = "";
-        state = "";
-        zipcode = "";
     }
 
     /**
@@ -28,83 +17,45 @@ public class Address {
      * @param zipcode - zipcode of region
      */
     public Address(String addressLine1, String addressLine2, String city, String state, String zipcode) {
-        this.addressLine1 = addressLine1;
-        this.addressLine2 = addressLine2;
-        this.city = city;
-        this.state = state;
-        this.zipcode = zipcode;
     }
 
     public String getAddressLine1() {
-        return addressLine1;
+        return null;
     }
 
     public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
     }
 
     public String getAddressLine2() {
-        return addressLine2;
+        return null;
     }
 
     public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
     }
 
     public String getCity() {
-        return city;
+        return null;
     }
 
     public void setCity(String city) {
-        this.city = city;
     }
 
     public String getState() {
-        return state;
+        return null;
     }
 
     public void setState(String state) {
-        this.state = state;
     }
 
     public String getZipcode() {
-        return zipcode;
+        return null;
     }
 
     public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
     }
 
     @Override
     public boolean equals(Object o) {
-        if(o == null || this.getClass() != o.getClass()){
-            return false;
-        }
-
-        Address x = (Address) o;
-        return thisequals(addressLine1, x.addressLine1)&&
-                thisequals(addressLine2, x.addressLine2)&&
-                thisequals(city, x.city)&&
-                thisequals(state, x.state)&&
-                thisequals(zipcode, x.zipcode);
-
-    }
-
-    public static boolean thisequals(Object o1, Object o2){
-        if(o1 == o2){
-            return true;
-        }
-        if(o1 == null || o2 == null){
-            return false;
-        }
-        return o1.equals(o2);
-    }
-
-    @Override
-    public String toString() {
-        String toreturn = "Address{addressLine1='" + addressLine1+ "', addressLine2='" + addressLine2 +
-                "', city='"+ city+"', state='"+state+"', zipcode='"+zipcode+"'}";
-
-        return toreturn;
+        return (Boolean)null;
     }
 }
